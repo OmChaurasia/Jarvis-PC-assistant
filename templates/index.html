@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om's PC Assistant</title>
+    <style>
+        body{
+            background: #e5ddd5;
+        }
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        textarea {
+            display: flex;
+            margin: auto;
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 20px;
+        }
+
+        .container button {
+            width: 40%;
+            padding: 10px;
+            font-size: 25px;
+            border: none;
+            background: rgb(68, 0, 255);
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .left {
+            text-align: left;
+          line-height: 35px;
+        }
+
+        .right {
+            text-align: right;
+            line-height: 35px;
+        }
+        .box1{
+            display: inline;
+            align-items: left;
+            background: #dcf8c6;
+            padding: 6px;
+            color: #717171;
+            border-radius: 5px;
+            max-width: 80%;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.150);
+        }
+        .box2{
+            display: inline;
+            align-items: right;
+            background: #fff;
+            padding: 6px;
+            color: #717171;
+            max-width: 80%;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.150);
+        }
+        #submit{
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <H3>Om's PC Assistant</H3>
+    <div class="container">
+        
+        <div class="right"><p class="box1">Hello Om Bro! How can I help you</p></div>
+        {{q|safe}}
+        
+        {{a|safe}}
+    </div>
+    <form action="." method="post" id="myForm">
+
+        <textarea name="textbox" id="textbox" rows="10"></textarea>
+        <div class="container">
+            <button type="submit" id="submit">Send</button>
+
+        </div>
+    </form>
+    <div class="container">
+        <button id="start-record">Start Recording</button>
+
+    </div>
+    <div class="container" id="board">
+
+    </div>
+
+  
+</body>
+<script src="../static/index.js"></script>
+
+</html>
